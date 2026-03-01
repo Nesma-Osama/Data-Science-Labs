@@ -1,9 +1,8 @@
 book_title,borrower_name,borrow_date,due_date,days_overdue,estimated_fine
-The Days,Ahmed Hassan,2023-12-07,2023-12-21,801,1602
-The Map of Love,Omar Khaled,2023-12-12,2023-12-26,796,1592
-The Days,Omar Khaled,2023-12-19,2024-01-02,789,1578
-The Days,Omar Khaled,2023-12-22,2024-01-05,786,1572
-The Yacoubian Building,Fatima Ali,2023-12-24,2024-01-07,784,1568
-Children of Gebelawi,Ahmed Hassan,2024-01-08,2024-01-22,769,1538
-God Dies by the Nile,Layla Mahmoud,2024-01-15,2024-01-29,762,1524
-Cairo Trilogy,Fatima Ali,2024-01-21,2024-02-04,756,1512
+Cairo Trilogy,Omar Khaled,2023-12-19,2024-01-02,789,1578
+Woman at Point Zero,Omar Khaled,2023-12-20,2024-01-03,788,1576
+Children of Gebelawi,Omar Khaled,2023-12-23,2024-01-06,785,1570
+Cairo Trilogy,Ahmed Hassan,2023-12-29,2024-01-12,779,1558
+Woman at Point Zero,Layla Mahmoud,2024-01-03,2024-01-17,774,1548
+Woman at Point Zero,Layla Mahmoud,2024-01-04,2024-01-18,773,1546
+God Dies by the Nile,Mohamed Ibrahim,2024-01-28,2024-02-11,749,1498
