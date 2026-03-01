@@ -84,6 +84,7 @@ df2_2.to_csv('task2_2.csv', index=False)
 
 # ─── Template for Task 3.1 ────────────────────────────────────────────────────
 # on_time_return_rate  I considered it (Count of returned on time)/(total count of returned)
+# Use the left outer join to include all memeber even if they didnot borrow and book
 query3_1 = """
 WITH member_borrowing_stats AS (
     SELECT m.member_id,m.name AS member_name,m.membership_type,
