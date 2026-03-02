@@ -1,8 +1,6 @@
 book_title,borrower_name,borrow_date,due_date,days_overdue,estimated_fine
-Cairo Trilogy,Omar Khaled,2023-12-19,2024-01-02,789,1578
-Woman at Point Zero,Omar Khaled,2023-12-20,2024-01-03,788,1576
-Children of Gebelawi,Omar Khaled,2023-12-23,2024-01-06,785,1570
-Cairo Trilogy,Ahmed Hassan,2023-12-29,2024-01-12,779,1558
-Woman at Point Zero,Layla Mahmoud,2024-01-03,2024-01-17,774,1548
-Woman at Point Zero,Layla Mahmoud,2024-01-04,2024-01-18,773,1546
-God Dies by the Nile,Mohamed Ibrahim,2024-01-28,2024-02-11,749,1498
+Children of Gebelawi,Mohamed Ibrahim,2023-12-08,2023-12-22,801,1602
+The Days,Ahmed Hassan,2023-12-20,2024-01-03,789,1578
+Children of Gebelawi,Ahmed Hassan,2023-12-20,2024-01-03,789,1578
+God Dies by the Nile,Mohamed Ibrahim,2023-12-29,2024-01-12,780,1560
+Children of Gebelawi,Omar Khaled,2024-01-29,2024-02-12,749,1498
