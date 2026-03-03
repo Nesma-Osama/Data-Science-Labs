@@ -1,0 +1,26 @@
+-------------------------Task 2 Analysis Report----------------------
+Most used programming language: Jupyter Notebook
+Average stars per repository: 0.07142857142857142
+Total forks across all repos: 2
+Most recently updated repo:
+name                 Data-Science-Labs
+stars                                0
+forks                                0
+language              Jupyter Notebook
+open_issues                          0
+created_date      2026-03-01T12:59:42Z
+updated_date      2026-03-02T19:39:09Z
+watchers_count                       0
+Name: 10, dtype: object
+
+
+Oldest repo:
+name                Process-Scheduler-
+stars                                0
+forks                                1
+language                           C++
+open_issues                          0
+created_date      2023-07-09T17:14:30Z
+updated_date      2023-08-09T22:06:49Z
+watchers_count                       0
+Name: 27, dtype: object

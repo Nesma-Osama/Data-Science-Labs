@@ -1,0 +1,55 @@
+2026-03-03 23:22:54,462 - GitHubAPI - INFO - GET /repos/tensorflow/tensorflow - Status: 200
+2026-03-03 23:22:54,797 - GitHubAPI - INFO - GET /repos/pytorch/pytorch - Status: 200
+2026-03-03 23:22:55,252 - GitHubAPI - INFO - GET /repos/scikit-learn/scikit-learn - Status: 200
+2026-03-04 00:09:43,281 - GitHubAPI - INFO - GET /repos/tensorflow/tensorflow - Status: 200
+2026-03-04 00:09:43,660 - GitHubAPI - INFO - GET /repos/pytorch/pytorch - Status: 200
+2026-03-04 00:09:44,021 - GitHubAPI - INFO - GET /repos/scikit-learn/scikit-learn - Status: 200
+2026-03-04 00:09:46,812 - __main__ - INFO - fetch page 1 and the result is 42 repos
+2026-03-04 00:09:49,272 - __main__ - INFO - fetch page 2 and the result is 0 repos
+2026-03-04 00:09:49,273 - __main__ - INFO - you've hit the last page 2
+2026-03-04 00:11:26,095 - GitHubAPI - INFO - GET /repos/tensorflow/tensorflow - Status: 200
+2026-03-04 00:11:26,480 - GitHubAPI - INFO - GET /repos/pytorch/pytorch - Status: 200
+2026-03-04 00:11:26,836 - GitHubAPI - INFO - GET /repos/scikit-learn/scikit-learn - Status: 200
+2026-03-04 00:11:29,063 - __main__ - INFO - fetch page 1 and the result is 42 repos
+2026-03-04 00:11:31,067 - __main__ - INFO - you've hit the last page 2
+2026-03-04 00:12:43,818 - GitHubAPI - INFO - GET /repos/tensorflow/tensorflow - Status: 200
+2026-03-04 00:12:44,179 - GitHubAPI - INFO - GET /repos/pytorch/pytorch - Status: 200
+2026-03-04 00:12:44,529 - GitHubAPI - INFO - GET /repos/scikit-learn/scikit-learn - Status: 200
+2026-03-04 00:12:46,696 - fetch_user_repos_paginated - INFO - fetch page 1 and the result is 42 repos
+2026-03-04 00:12:48,694 - fetch_user_repos_paginated - INFO - you've hit the last page 2
+2026-03-04 00:15:01,714 - GitHubAPI - INFO - GET /repos/tensorflow/tensorflow - Status: 200
+2026-03-04 00:15:02,087 - GitHubAPI - INFO - GET /repos/pytorch/pytorch - Status: 200
+2026-03-04 00:15:02,529 - GitHubAPI - INFO - GET /repos/scikit-learn/scikit-learn - Status: 200
+2026-03-04 00:15:04,529 - fetch_user_repos_paginated - INFO - you've hit the last page 1 with less than 100 repos
+2026-03-04 00:16:09,161 - GitHubAPI - INFO - GET /repos/tensorflow/tensorflow - Status: 200
+2026-03-04 00:16:09,514 - GitHubAPI - INFO - GET /repos/pytorch/pytorch - Status: 200
+2026-03-04 00:16:09,858 - GitHubAPI - INFO - GET /repos/scikit-learn/scikit-learn - Status: 200
+2026-03-04 00:16:12,299 - fetch_user_repos_paginated - INFO - 1 is the last page  with less than 100 repos
+2026-03-04 00:38:13,337 - GitHubAPI - INFO - GET /repos/tensorflow/tensorflow - Status: 200
+2026-03-04 00:38:13,743 - GitHubAPI - INFO - GET /repos/pytorch/pytorch - Status: 200
+2026-03-04 00:38:14,070 - GitHubAPI - INFO - GET /repos/scikit-learn/scikit-learn - Status: 200
+2026-03-04 00:38:16,179 - fetch_user_repos_paginated - INFO - Page 1 is the last page  with less than 100 repos
+2026-03-04 00:41:52,419 - GitHubAPI - INFO - GET /repos/tensorflow/tensorflow - Status: 200
+2026-03-04 00:41:52,772 - GitHubAPI - INFO - GET /repos/pytorch/pytorch - Status: 200
+2026-03-04 00:41:53,144 - GitHubAPI - INFO - GET /repos/scikit-learn/scikit-learn - Status: 200
+2026-03-04 00:41:56,621 - fetch_user_repos_paginated - INFO - Page 1 is the last page  with less than 100 repos
+2026-03-04 00:42:45,538 - GitHubAPI - INFO - GET /repos/tensorflow/tensorflow - Status: 200
+2026-03-04 00:42:45,894 - GitHubAPI - INFO - GET /repos/pytorch/pytorch - Status: 200
+2026-03-04 00:42:46,256 - GitHubAPI - INFO - GET /repos/scikit-learn/scikit-learn - Status: 200
+2026-03-04 00:42:48,656 - fetch_user_repos_paginated - INFO - Page 1 is the last page  with less than 100 repos
+2026-03-04 00:46:15,390 - GitHubAPI - INFO - GET /repos/tensorflow/tensorflow - Status: 200
+2026-03-04 00:46:15,724 - GitHubAPI - INFO - GET /repos/pytorch/pytorch - Status: 200
+2026-03-04 00:46:16,028 - GitHubAPI - INFO - GET /repos/scikit-learn/scikit-learn - Status: 200
+2026-03-04 00:46:18,072 - fetch_user_repos_paginated - INFO - Page 1 is the last page  with less than 100 repos
+2026-03-04 00:47:12,992 - GitHubAPI - INFO - GET /repos/tensorflow/tensorflow - Status: 200
+2026-03-04 00:47:13,392 - GitHubAPI - INFO - GET /repos/pytorch/pytorch - Status: 200
+2026-03-04 00:47:13,709 - GitHubAPI - INFO - GET /repos/scikit-learn/scikit-learn - Status: 200
+2026-03-04 00:47:15,689 - fetch_user_repos_paginated - INFO - Page 1 is the last page  with less than 100 repos
+2026-03-04 00:47:45,689 - GitHubAPI - INFO - GET /repos/tensorflow/tensorflow - Status: 200
+2026-03-04 00:47:46,093 - GitHubAPI - INFO - GET /repos/pytorch/pytorch - Status: 200
+2026-03-04 00:47:46,499 - GitHubAPI - INFO - GET /repos/scikit-learn/scikit-learn - Status: 200
+2026-03-04 00:47:48,992 - fetch_user_repos_paginated - INFO - Page 1 is the last page  with less than 100 repos
+2026-03-04 00:48:19,423 - GitHubAPI - INFO - GET /repos/tensorflow/tensorflow - Status: 200
+2026-03-04 00:48:19,792 - GitHubAPI - INFO - GET /repos/pytorch/pytorch - Status: 200
+2026-03-04 00:48:20,097 - GitHubAPI - INFO - GET /repos/scikit-learn/scikit-learn - Status: 200
+2026-03-04 00:48:22,503 - fetch_user_repos_paginated - INFO - Page 1 is the last page  with less than 100 repos
