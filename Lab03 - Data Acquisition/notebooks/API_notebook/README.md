@@ -6,7 +6,7 @@ I found that the oldest repo across `sklrean`, `pytorch`, `tensorflow` is `sklre
 I fetched repos from my github account
 the public repos is 42 so the are returned is only one page
 Most used programming language across all repos: `Jupyter Notebook` and Average stars per repository: around `0.07`,Total forks across all repos: `2`
-Most recently updated repo: `BigData`
+Most recently updated repo: `Data-Science-Labs`
 Oldest repo: `Process-Scheduler-`
 
 ## Task3

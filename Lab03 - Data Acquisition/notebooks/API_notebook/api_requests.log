@@ -1,14 +1,14 @@
-2026-03-04 20:10:08,190 - GitHubAPI - INFO - GET /repos/tensorflow/tensorflow - Status: 200
-2026-03-04 20:10:08,594 - GitHubAPI - INFO - GET /repos/pytorch/pytorch - Status: 200
-2026-03-04 20:10:08,932 - GitHubAPI - INFO - GET /repos/scikit-learn/scikit-learn - Status: 200
-2026-03-04 20:10:10,529 - fetch_user_repos_paginated - INFO - Page 1 is the last page  with less than 100 repos
-2026-03-04 20:10:10,572 - GitHubAnalyzer - INFO - Searching for query: data science language:Python stars:>=500
-2026-03-04 20:10:12,877 - GitHubAnalyzer - INFO - GET /search/repositories  - Status: 200
-2026-03-04 20:10:12,899 - GitHubAnalyzer - INFO - Found 30 repositories for query: data science language:Python stars:>=500
-2026-03-04 20:10:12,900 - GitHubAnalyzer - INFO - Comparing repositories: ['pandas-dev/pandas', 'numpy/numpy', 'scikit-learn/scikit-learn', 'tensorflow/tensorflow', 'pytorch/pytorch']
-2026-03-04 20:10:13,241 - GitHubAnalyzer - INFO - GET /repos/pandas-dev/pandas  - Status: 200
-2026-03-04 20:10:13,626 - GitHubAnalyzer - INFO - GET /repos/numpy/numpy  - Status: 200
-2026-03-04 20:10:13,998 - GitHubAnalyzer - INFO - GET /repos/scikit-learn/scikit-learn  - Status: 200
-2026-03-04 20:10:14,411 - GitHubAnalyzer - INFO - GET /repos/tensorflow/tensorflow  - Status: 200
-2026-03-04 20:10:14,805 - GitHubAnalyzer - INFO - GET /repos/pytorch/pytorch  - Status: 200
-2026-03-04 20:10:14,823 - GitHubAnalyzer - INFO - Exporting DataFrame to task3_results.xlsx
+2026-03-04 21:17:16,788 - GitHubAPI - INFO - GET /repos/tensorflow/tensorflow - Status: 200
+2026-03-04 21:17:17,151 - GitHubAPI - INFO - GET /repos/pytorch/pytorch - Status: 200
+2026-03-04 21:17:17,493 - GitHubAPI - INFO - GET /repos/scikit-learn/scikit-learn - Status: 200
+2026-03-04 21:17:19,464 - fetch_user_repos_paginated - INFO - Page 1 is the last page  with less than 100 repos
+2026-03-04 21:17:19,529 - GitHubAnalyzer - INFO - Searching for query: data science language:Python stars:>=500
+2026-03-04 21:17:21,542 - GitHubAnalyzer - INFO - GET /search/repositories  - Status: 200
+2026-03-04 21:17:21,551 - GitHubAnalyzer - INFO - Found 30 repositories for query: data science language:Python stars:>=500
+2026-03-04 21:17:21,551 - GitHubAnalyzer - INFO - Comparing repositories: ['pandas-dev/pandas', 'numpy/numpy', 'scikit-learn/scikit-learn', 'tensorflow/tensorflow', 'pytorch/pytorch']
+2026-03-04 21:17:22,067 - GitHubAnalyzer - INFO - GET /repos/pandas-dev/pandas  - Status: 200
+2026-03-04 21:17:22,381 - GitHubAnalyzer - INFO - GET /repos/numpy/numpy  - Status: 200
+2026-03-04 21:17:22,732 - GitHubAnalyzer - INFO - GET /repos/scikit-learn/scikit-learn  - Status: 200
+2026-03-04 21:17:23,158 - GitHubAnalyzer - INFO - GET /repos/tensorflow/tensorflow  - Status: 200
+2026-03-04 21:17:23,547 - GitHubAnalyzer - INFO - GET /repos/pytorch/pytorch  - Status: 200
+2026-03-04 21:17:23,559 - GitHubAnalyzer - INFO - Exporting DataFrame to task3_results.xlsx

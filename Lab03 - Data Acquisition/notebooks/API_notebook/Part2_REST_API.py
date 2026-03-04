@@ -491,17 +491,17 @@ class GitHubAnalyzer:
         self.logger.info(f"Exporting DataFrame to {filename}")
         with pd.ExcelWriter(filename, engine="openpyxl") as writer:
             df.to_excel(writer, index=False, sheet_name="results_sheet")
-            worksheet = writer.sheets["results_sheet"]
-            for cell in worksheet[1]:
+            results_sheet = writer.sheets["results_sheet"]
+            for cell in results_sheet[1]:
                 cell.font = Font(bold=True)
-            for column_cells in worksheet.columns:
+            for column_cells in results_sheet.columns:
                 max_length = max(
                     len(str(cell.value)) if cell.value is not None else 0
                     for cell in column_cells
                 )
                 width = max_length + 3
-                worksheet.column_dimensions[column_cells[0].column_letter].width = width
-            worksheet[f"A{worksheet.max_row + 2}"].value = (
+                results_sheet.column_dimensions[column_cells[0].column_letter].width = width
+            results_sheet[f"A{results_sheet.max_row + 2}"].value = (
                 f"Created at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
             )
 

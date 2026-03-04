@@ -3,13 +3,13 @@ Most used programming language across all repos: Jupyter Notebook
 Average stars per repository: 0.07142857142857142
 Total forks across all repos: 2
 Most recently updated repo:
-name                              BigData
+name                    Data-Science-Labs
 forks_count                             0
 stargazers_count                        0
-language                                R
+language                 Jupyter Notebook
 open_issues_count                       0
-created_at           2026-02-17T00:03:46Z
-Name: 3, dtype: object
+created_at           2026-03-01T12:59:42Z
+Name: 10, dtype: object
 
 
 Oldest repo:
