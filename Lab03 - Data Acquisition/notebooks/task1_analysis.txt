@@ -1,0 +1,6 @@
+TRAVEL BOOKS ANALYSIS
+==================================================
+Total travel books scraped : 11
+Average price              : £39.79
+5-star rated books         : 1
+Percentage in stock        : 100.0%

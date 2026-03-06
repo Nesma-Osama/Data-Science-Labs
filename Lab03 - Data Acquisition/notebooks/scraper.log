@@ -1,0 +1,14 @@
+2026-03-06 22:41:52,747 - INFO - No previous progress found — starting fresh
+2026-03-06 22:41:52,747 - INFO - No previous progress found, starting fresh.
+2026-03-06 22:41:52,747 - INFO - Starting scrape for category: Mystery
+2026-03-06 22:41:55,069 - INFO - Progress saved: 32 books → progress.json
+2026-03-06 22:41:55,069 - INFO - Finished 'Mystery': 32 valid books
+2026-03-06 22:41:55,069 - INFO - Starting scrape for category: Science Fiction
+2026-03-06 22:41:55,668 - INFO - Progress saved: 48 books → progress.json
+2026-03-06 22:41:55,668 - INFO - Finished 'Science Fiction': 16 valid books
+2026-03-06 22:41:55,668 - INFO - Starting scrape for category: Fantasy
+2026-03-06 22:42:00,582 - INFO - Progress saved: 96 books → progress.json
+2026-03-06 22:42:00,582 - INFO - Finished 'Fantasy': 48 valid books
+2026-03-06 22:42:00,694 - INFO - Data exported to task3_books.csv, .xlsx, and .json
+2026-03-06 22:42:00,694 - INFO - Exported 96 books to task3_books.csv / .xlsx / .json
+2026-03-06 22:42:00,694 - INFO - Scraping pipeline completed.
