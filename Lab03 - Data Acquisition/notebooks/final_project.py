@@ -376,12 +376,6 @@ class BookMarketIntelligence:
 
 
     def generate_report(self, insights):
-        """
-        Write analysis.html — a standalone HTML report with insights and charts.
-
-        Args:
-            insights: dict returned by analyze_and_visualize()
-        """
         now = datetime.now().strftime('%Y-%m-%d %H:%M')
 
         html = f"""<!DOCTYPE html>
@@ -473,15 +467,6 @@ class BookMarketIntelligence:
         
 
     def export_all_data(self, output_dir='exports'):
-        """
-        Export every pipeline table to a CSV file in output_dir.
-
-        Files created:
-            exports/web_books.csv
-            exports/github_repos.csv
-            exports/library_books.csv
-            exports/pipeline_logs.csv
-        """
         os.makedirs(output_dir, exist_ok=True)
         for table in ['web_books', 'github_repos', 'library_books', 'pipeline_logs']:
             df = pd.read_sql_query(f"SELECT * FROM {table}", self.conn)
@@ -491,20 +476,11 @@ class BookMarketIntelligence:
         self.logger.info(f"All data exported to {output_dir}/")
 
     def close(self):
-        """Close the database connection cleanly."""
         self.conn.close()
         self.logger.info("Pipeline closed")
 
 
     def run(self):
-        """
-        Execute all five pipeline steps end-to-end:
-          1. Collect from database
-          2. Collect from GitHub API
-          3. Scrape books.toscrape.com
-          4. Analyse + visualise
-          5. Generate HTML report + export CSVs
-        """
         print("=" * 60)
         print("  BOOK MARKET INTELLIGENCE SYSTEM")
         print("=" * 60)
