@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Market Intelligence Report</title>
+  <style>
+    body  { font-family: Arial, sans-serif; max-width: 960px;
+             margin: 40px auto; color: #333; line-height: 1.6; }
+    h1    { color: #2c5282; border-bottom: 3px solid #2c5282; padding-bottom: 8px; }
+    h2    { color: #2b6cb0; margin-top: 36px; }
+    table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+    th, td { border: 1px solid #ddd; padding: 10px 14px; text-align: left; }
+    th    { background: #2c5282; color: #fff; }
+    tr:nth-child(even) { background: #f7fafc; }
+    .cards { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; }
+    .card  { background: #ebf8ff; border-left: 4px solid #3182ce;
+              padding: 14px 22px; border-radius: 4px; min-width: 160px; }
+    .card b { display: block; font-size: 1.4em; color: #2c5282; }
+    img   { max-width: 100%; border-radius: 6px;
+             box-shadow: 0 2px 10px rgba(0,0,0,.15); margin-top: 20px; }
+    ul li { margin-bottom: 6px; }
+    footer { color: #aaa; font-size: .85em; margin-top: 48px;
+              border-top: 1px solid #eee; padding-top: 12px; }
+  </style>
+</head>
+<body>
+
+<h1>Book Market Intelligence Report</h1>
+<p>Generated: <strong>2026-03-07 09:56</strong></p>
+
+<h2>Executive Summary</h2>
+<div class="cards">
+  <div class="card"><b>106</b>Web Books Scraped</div>
+  <div class="card"><b>20</b>GitHub Repos</div>
+  <div class="card"><b>8</b>Library Books (DB)</div>
+  <div class="card"><b>£34.77</b>Avg Web Price</div>
+  <div class="card"><b>2.88 ★</b>Avg Rating</div>
+  <div class="card"><b>100.0%</b>In Stock</div>
+</div>
+
+<h2>Market Insights</h2>
+<table>
+  <tr><th>Metric</th><th>Finding</th></tr>
+  <tr><td>Most expensive category (avg)</td><td><strong>History</strong></td></tr>
+  <tr><td>Cheapest category (avg)</td><td><strong>Mystery</strong></td></tr>
+  <tr><td>Highest rated category</td><td><strong>Fiction</strong></td></tr>
+  <tr><td>Overall average price</td><td>£34.77</td></tr>
+  <tr><td>Overall average rating</td><td>2.88 / 5</td></tr>
+  <tr><td>In-stock percentage</td><td>100.0%</td></tr>
+</table>
+
+<h2>Visualisations</h2>
+<img src="market_analysis.png" alt="Market Analysis Charts — 5 panels">
+
+<h2>Recommendations</h2>
+<ul>
+  <li><strong>Fiction</strong> books receive the
+      highest customer ratings — prioritise stocking this genre.</li>
+  <li><strong>Mystery</strong> has the lowest average
+      price — a strong entry point for budget-conscious buyers.</li>
+  <li>With <strong>100.0%</strong> of titles in stock,
+      availability is healthy, but supply for top-rated genres should be
+      monitored closely.</li>
+  <li>GitHub trends show strong developer interest in book-related tools —
+      digital/API integrations represent a growing opportunity.</li>
+  <li>Cross-referencing web prices with library circulation data can reveal
+      which genres offer the best value relative to reader demand.</li>
+</ul>
+
+<h2>Data Collection Statistics</h2>
+<table>
+  <tr><th>Source</th><th>Records Collected</th></tr>
+  <tr><td>Web Scraping (books.toscrape.com)</td><td>106</td></tr>
+  <tr><td>GitHub API</td><td>20</td></tr>
+  <tr><td>Library Database (library.db)</td><td>8</td></tr>
+</table>
+
+<footer>
+  Book Market Intelligence System &mdash; Data Science Lab 03 &mdash; 2026-03-07 09:56
+</footer>
+</body>
+</html>
