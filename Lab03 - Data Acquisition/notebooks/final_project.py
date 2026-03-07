@@ -332,7 +332,7 @@ class BookMarketIntelligence:
             top10 = df_api.nlargest(10, 'stars')
             ax5.barh(top10['name'], top10['stars'],
                      color='#55A868', edgecolor='white')
-            ax5.set_title('Top 10 Book Repos on GitHub (⭐)', fontweight='bold')
+            ax5.set_title('Top 10 Book Repos on GitHub', fontweight='bold')
             ax5.set_xlabel('Stars')
             ax5.invert_yaxis()
         else:
