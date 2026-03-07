@@ -5,3 +5,6 @@ id,source_type,records_collected,status,error_message,timestamp
 4,database,8,success,,2026-03-07 08:03:50
 5,api,20,success,,2026-03-07 08:03:51
 6,web,106,success,,2026-03-07 08:03:57
+7,database,8,success,,2026-03-07 08:38:46
+8,api,20,success,,2026-03-07 08:38:47
+9,web,106,success,,2026-03-07 08:38:51

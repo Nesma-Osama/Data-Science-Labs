@@ -22,3 +22,15 @@
 2026-03-07 10:03:57,180 - INFO - [WEB] ✓ 106 total web books collected
 2026-03-07 10:04:00,456 - INFO - All data exported to exports/
 2026-03-07 10:04:00,456 - INFO - Pipeline closed
+2026-03-07 10:38:46,441 - INFO - Pipeline initialised — DB: market_intelligence.db
+2026-03-07 10:38:46,441 - INFO - [DB] Connecting to library.db
+2026-03-07 10:38:46,453 - INFO - [DB] ✓ 8 library books collected
+2026-03-07 10:38:46,456 - INFO - [API] Searching GitHub: 'books python data'
+2026-03-07 10:38:47,389 - INFO - [API] ✓ 20 repos collected
+2026-03-07 10:38:50,718 - INFO - [WEB] 'Fiction' — 40 books
+2026-03-07 10:38:51,209 - INFO - [WEB] 'Mystery' — 32 books
+2026-03-07 10:38:51,418 - INFO - [WEB] 'Science Fiction' — 16 books
+2026-03-07 10:38:51,626 - INFO - [WEB] 'History' — 18 books
+2026-03-07 10:38:51,669 - INFO - [WEB] ✓ 106 total web books collected
+2026-03-07 10:38:57,842 - INFO - All data exported to exports/
+2026-03-07 10:38:57,842 - INFO - Pipeline closed

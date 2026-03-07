@@ -2,14 +2,15 @@ import sqlite3
 import logging
 import time
 import os
-from datetime import datetime
-from urllib.parse import urljoin
 import requests
-from bs4 import BeautifulSoup
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
-import numpy as np
+
+from datetime import datetime
+from urllib.parse import urljoin, urlparse
+from bs4 import BeautifulSoup
+from collections import deque
 
 
 class BookMarketIntelligence:
@@ -41,6 +42,12 @@ class BookMarketIntelligence:
         self.session.headers.update(
             {'User-Agent': 'BookMarketIntelligence/1.0 (Educational)'}
         )
+
+        self.base_url = 'http://books.toscrape.com'
+        self.rate_limiter = deque()
+        self.max_requests  = 10
+        self.time_window   = 60.0
+        self.progress      = {}  
 
         self.logger.info(f"Pipeline initialised — DB: {db_path}")
 
@@ -111,6 +118,63 @@ class BookMarketIntelligence:
             (source_type, records, status, error),
         )
         self.conn.commit()
+    
+
+    def _wait_for_rate_limit(self):
+        now = time.time()
+        while self.rate_limiter and now - self.rate_limiter[0] > self.time_window:
+            self.rate_limiter.popleft()
+
+        if len(self.rate_limiter) >= self.max_requests:
+            wait_time = self.time_window - (now - self.rate_limiter[0])
+            print(f"Rate limit reached — waiting {wait_time:.1f}s...")
+            time.sleep(wait_time)
+
+        self.rate_limiter.append(time.time())
+
+
+    def _check_robots_txt(self, url):
+        from urllib.robotparser import RobotFileParser
+        try:
+            parsed = urlparse(url)
+            robots_url = f"{parsed.scheme}://{parsed.netloc}/robots.txt"
+            rp = RobotFileParser()
+            rp.set_url(robots_url)
+            rp.read()
+            return rp.can_fetch(self.session.headers['User-Agent'], url)
+        except Exception:
+            return False
+        
+
+    def _scrape_with_retry(self, url, max_attempts=3):
+        for attempt in range(1, max_attempts + 1):
+            try:
+                self._wait_for_rate_limit()
+                response = self.session.get(url, timeout=10)
+                response.raise_for_status()
+                return response.text
+            except Exception as e:
+                wait_time = 2 ** (attempt - 1)
+                self.logger.warning(f"Attempt {attempt} failed for {url}: {e}")
+                if attempt < max_attempts:
+                    print(f"Retrying in {wait_time}s...")
+                    time.sleep(wait_time)
+                else:
+                    self.logger.error(f"All attempts failed for {url}")
+                    return None
+                
+
+    def _validate_book_data(self, book):
+        if not book.get('title'):
+            self.logger.warning("Invalid book data: missing title")
+            return False
+        if not isinstance(book.get('price'), (int, float)) or book['price'] <= 0:
+            self.logger.warning(f"Invalid price for '{book.get('title')}': {book.get('price')}")
+            return False
+        if not (1 <= book.get('rating', 0) <= 5):
+            self.logger.warning(f"Invalid rating for '{book.get('title')}': {book.get('rating')}")
+            return False
+        return True
 
 
     def collect_from_database(self, source_db_path='library.db'):
@@ -143,6 +207,7 @@ class BookMarketIntelligence:
             self.logger.error(f"[DB] ✗ {e}")
             self._log('database', 0, 'error', str(e))
             return pd.DataFrame()
+        
 
     def collect_from_api(self, query='books python', per_page=30):
         self.logger.info(f"[API] Searching GitHub: '{query}'")
@@ -185,13 +250,16 @@ class BookMarketIntelligence:
             self.logger.error(f"[API] ✗ {e}")
             self._log('api', 0, 'error', str(e))
             return pd.DataFrame()
-
+        
 
     def collect_from_web(self, categories=None, max_pages=2):
+        if not self._check_robots_txt(self.base_url):
+            self.logger.warning("[WEB] Scraping not allowed by robots.txt")
+            return pd.DataFrame()
+
         if categories is None:
             categories = list(self.CATEGORY_SLUGS.keys())
 
-        base = 'http://books.toscrape.com'
         all_books = []
 
         for cat in categories:
@@ -200,14 +268,17 @@ class BookMarketIntelligence:
                 self.logger.warning(f"[WEB] Unknown category: {cat}")
                 continue
 
-            url = f"{base}/catalogue/category/books/{slug}/index.html"
+            url = f"{self.base_url}/catalogue/category/books/{slug}/index.html"
             page = 1
 
             while url and page <= max_pages:
+                html = self._scrape_with_retry(url)
+                if not html:
+                    self.logger.error(f"[WEB] Failed to retrieve {url}")
+                    break
+
                 try:
-                    resp = self.session.get(url, timeout=10)
-                    resp.raise_for_status()
-                    soup = BeautifulSoup(resp.text, 'lxml')
+                    soup = BeautifulSoup(html, 'lxml')
 
                     for article in soup.select('article.product_pod'):
                         title_el   = article.select_one('h3 a')
@@ -223,32 +294,25 @@ class BookMarketIntelligence:
                             self.logger.warning(f"[WEB] Skipping invalid price: {price_text}")
                             continue
 
-                        rating = self.RATING_MAP.get(rating_cls, 0)
-                        if not (1 <= rating <= 5):
-                            self.logger.warning(f"[WEB] Skipping invalid rating: {rating_cls}")
-                            continue
-
-                        title = title_el.get('title', '').strip()
-                        if not title:
-                            continue
-
-                        all_books.append({
-                            'title':    title,
+                        book = {
+                            'title':    title_el.get('title', '').strip(),
                             'price':    price,
-                            'rating':   rating,
+                            'rating':   self.RATING_MAP.get(rating_cls, 0),
                             'in_stock': int('In stock' in avail),
                             'category': cat,
-                        })
+                        }
+
+                        if not self._validate_book_data(book):
+                            continue
+
+                        all_books.append(book)
 
                     next_btn = soup.select_one('li.next a')
                     url = urljoin(url, next_btn['href']) if next_btn else None
                     page += 1
 
-                    if url and page <= max_pages:
-                        time.sleep(1)
-
                 except Exception as e:
-                    self.logger.error(f"[WEB] Error on {url}: {e}")
+                    self.logger.error(f"[WEB] Error parsing {url}: {e}")
                     break
 
             cat_count = sum(1 for b in all_books if b['category'] == cat)
@@ -508,11 +572,11 @@ class BookMarketIntelligence:
         print(f"      Library books  : {insights['total_library_books']}")
         print()
         print("  Output files:")
-        print(f"      market_intelligence.db")
-        print(f"      market_analysis.png")
-        print(f"      analysis.html")
-        print(f"      exports/  (4 CSV files)")
-        print(f"      pipeline.log")
+        print("      market_intelligence.db")
+        print("      market_analysis.png")
+        print("      analysis.html")
+        print("      exports/  (4 CSV files)")
+        print("      pipeline.log")
         print("=" * 60)
 
         self.close()
