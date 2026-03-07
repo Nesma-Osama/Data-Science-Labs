@@ -83,7 +83,7 @@ class BookMarketIntelligence:
             )
         ''')
 
-        # Books from local library.db (joined with authors)
+        # Books from local library.db
         cur.execute('''
             CREATE TABLE IF NOT EXISTS library_books (
                 book_id          INTEGER PRIMARY KEY,
@@ -199,7 +199,7 @@ class BookMarketIntelligence:
             df.to_sql('library_books', self.conn, if_exists='replace', index=False)
             self.conn.commit()
 
-            self.logger.info(f"[DB] ✓ {len(df)} library books collected")
+            self.logger.info(f"[DB] {len(df)} library books collected")
             self._log('database', len(df), 'success')
             return df
 
@@ -242,7 +242,7 @@ class BookMarketIntelligence:
             df.to_sql('github_repos', self.conn, if_exists='replace', index=False)
             self.conn.commit()
 
-            self.logger.info(f"[API] ✓ {len(df)} repos collected")
+            self.logger.info(f"[API] {len(df)} repos collected")
             self._log('api', len(df), 'success')
             return df
 
@@ -329,7 +329,7 @@ class BookMarketIntelligence:
             df.to_sql('web_books', self.conn, if_exists='replace', index=False)
             self.conn.commit()
 
-        self.logger.info(f"[WEB] ✓ {len(df)} total web books collected")
+        self.logger.info(f"[WEB] {len(df)} total web books collected")
         self._log('web', len(df), 'success')
         return df
 
