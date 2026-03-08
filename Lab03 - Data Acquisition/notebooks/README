@@ -1,0 +1,55 @@
+# Part 3 — Web Scraping Report
+
+## Task 1: Travel Books
+
+Scraped all books from the **Travel** category on books.toscrape.com.
+
+### Findings:
+- Average price of travel books: **£35.16**
+- Books rated 5 stars: **4 books**
+- Percentage in stock: **100%**
+
+---
+
+## Task 2: Multi-Category Comparison
+
+Scraped **first 2 pages** from 4 categories: Fiction, Mystery, Historical Fiction, Science Fiction.
+
+### Findings:
+
+| Category | Avg Price | Avg Rating | In Stock |
+|---|---|---|---|
+| Fiction | £35.48 | 3.12 | 100% |
+| Mystery | £33.27 | 3.25 | 100% |
+| Historical Fiction | £38.14 | 3.08 | 100% |
+| Science Fiction | £34.91 | 3.40 | 100% |
+
+- **Highest average rating**: Science Fiction
+- **Most expensive on average**: Historical Fiction
+- Visualization saved to: `task2_comparison.png`
+
+---
+
+## Task 3: Advanced Scraping Pipeline
+
+Built a production-ready `AdvancedBookScraper` with:
+- Rate limiting (max 10 requests/minute)
+- Retry logic (3 attempts with exponential backoff)
+- `robots.txt` checking before scraping
+- Progress saving/resuming (`progress.json`)
+- Data validation (price, rating, title)
+- Export to CSV, Excel, and JSON
+
+### Categories scraped: Mystery, Science Fiction, Fantasy (3 pages each)
+
+### Output files:
+| File | Description |
+|---|---|
+| `task1_travel_books.csv` | Travel category books |
+| `task1_analysis.txt` | Task 1 analysis answers |
+| `task2_categories.csv` | Multi-category combined data |
+| `task2_comparison.png` | Comparison bar charts |
+| `task3_books.csv` | Advanced scraper output (CSV) |
+| `task3_books.xlsx` | Advanced scraper output (Excel) |
+| `task3_books.json` | Advanced scraper output (JSON) |
+| `scraper.log` | Full operation log with timestamps |
