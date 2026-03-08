@@ -5,7 +5,7 @@ from three sources, stores it in SQLite, and generates market insights.
 
 ---
 
-## 📦 Project Structure
+## Project Structure
 
 ```
 notebooks/
@@ -25,7 +25,7 @@ notebooks/
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 ```bash
 pip install requests beautifulsoup4 lxml pandas matplotlib numpy openpyxl
@@ -33,7 +33,7 @@ pip install requests beautifulsoup4 lxml pandas matplotlib numpy openpyxl
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ```bash
 cd "Lab03 - Data Acquisition/notebooks"
@@ -48,13 +48,13 @@ The script runs all 5 steps automatically and prints progress to the console.
 
 | # | Source | Details |
 |---|--------|---------|
-| 1 | **SQLite Database** | `SQL_notebook/library.db` — books joined with authors from Part 1 |
-| 2 | **GitHub REST API** | `api.github.com/search/repositories` — top repos matching "books python data" |
-| 3 | **Web Scraping** | `books.toscrape.com` — Fiction, Mystery, Science Fiction, History (2 pages each) |
+| 1 | **SQLite Database** | `SQL_notebook/library.db` -> books joined with authors from Part 1 |
+| 2 | **GitHub REST API** | `api.github.com/search/repositories` -> top repos matching "books python data" |
+| 3 | **Web Scraping** | `books.toscrape.com` -> Fiction, Mystery, Science Fiction, History (2 pages each) |
 
 ---
 
-## 🗂️ Database Schema
+## Database Schema
 
 ```
 market_intelligence.db
@@ -74,7 +74,7 @@ market_intelligence.db
 
 ---
 
-## 📊 Output Files
+## Output Files
 
 | File | Description |
 |------|-------------|
@@ -86,7 +86,7 @@ market_intelligence.db
 
 ---
 
-## 🔑 Key Findings (example — actual values depend on live data)
+## Key Findings (example -> actual values depend on live data)
 
 - **Highest-rated category**: determined at runtime from scraped data
 - **Most expensive category**: determined at runtime from scraped data
@@ -95,7 +95,7 @@ market_intelligence.db
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 BookMarketIntelligence
@@ -119,7 +119,7 @@ Data validation is applied during web scraping:
 
 ---
 
-## 📝 Dependencies
+## Dependencies
 
 | Package | Version | Purpose |
 |---------|---------|---------|
