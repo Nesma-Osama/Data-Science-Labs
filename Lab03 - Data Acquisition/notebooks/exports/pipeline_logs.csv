@@ -11,3 +11,6 @@ id,source_type,records_collected,status,error_message,timestamp
 10,database,8,success,,2026-03-07 12:12:16
 11,api,20,success,,2026-03-07 12:12:17
 12,web,106,success,,2026-03-07 12:12:20
+13,database,8,success,,2026-03-08 13:20:48
+14,api,20,success,,2026-03-08 13:20:49
+15,web,106,success,,2026-03-08 13:20:54

@@ -499,14 +499,14 @@ class BookMarketIntelligence:
 <h2>Recommendations</h2>
 <ul>
   <li><strong>{insights['highest_rated_category']}</strong> books receive the
-      highest customer ratings — prioritise stocking this genre.</li>
+      highest customer ratings, prioritise stocking this genre.</li>
   <li><strong>{insights['cheapest_category']}</strong> has the lowest average
-      price — a strong entry point for budget-conscious buyers.</li>
+      price, a strong entry point for budget-conscious buyers.</li>
   <li>With <strong>{insights['pct_in_stock']}%</strong> of titles in stock,
       availability is healthy, but supply for top-rated genres should be
       monitored closely.</li>
-  <li>GitHub trends show strong developer interest in book-related tools —
-      digital/API integrations represent a growing opportunity.</li>
+  <li>GitHub trends show strong developer interest in book-related tools,
+    digital/API integrations represent a growing opportunity.</li>
   <li>Cross-referencing web prices with library circulation data can reveal
       which genres offer the best value relative to reader demand.</li>
 </ul>
@@ -518,10 +518,6 @@ class BookMarketIntelligence:
   <tr><td>GitHub API</td><td>{insights['total_github_repos']}</td></tr>
   <tr><td>Library Database (library.db)</td><td>{insights['total_library_books']}</td></tr>
 </table>
-
-<footer>
-  Book Market Intelligence System &mdash; Data Science Lab 03 &mdash; {now}
-</footer>
 </body>
 </html>"""
 
